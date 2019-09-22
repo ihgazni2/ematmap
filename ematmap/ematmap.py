@@ -446,7 +446,7 @@ def mapfxyvo(d):
 
 #rcrdize         recordize
 
-def rcrdize(m)
+def rcrdize(m):
     map_func = lambda x,y,v:{"_ox":x,"_oy":y,"_v":v}
     nm = mapxyv(m,map_func=map_func)
     return(nm)
