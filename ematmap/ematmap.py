@@ -439,3 +439,60 @@ def mapfxyvo(d):
     return(ele)
 
 
+#################
+
+#ox orig_x
+#oy orig_y
+
+#rcrdize         recordize
+
+def rcrdize(m)
+    map_func = lambda x,y,v:{"_ox":x,"_oy":y,"_v":v}
+    nm = mapxyv(m,map_func=map_func)
+    return(nm)
+
+def unrcrdize_x(nm):
+    map_func = lambda v:v["_ox"]
+    om = mapv(nm,map_func=map_func)
+    return(om)
+
+def unrcrdize_y(nm):
+    map_func = lambda v:v["_oy"]
+    om = mapv(nm,map_func=map_func)
+    return(om)
+
+def unrcrdize_v(nm):
+    map_func = lambda v:v["_v"]
+    om = mapv(nm,map_func=map_func)
+    return(om)
+
+
+def rcrdize_wrapper(f):
+    '''
+        the data is already wrapped as 
+        {
+            "_ox":ox,
+            "_oy":oy,
+            "_v":ov
+        }
+        so the old map_func  should be wrapped
+    '''
+    def wrapper(*args,**kwargs):
+        mode = dflt_kwargs("mode","v",**kwargs)
+        mode = ''.join(list(filter(lambda ele:(ele in "xyv"),mode)))
+        which = mode.index("v")
+        v = args[which]
+        nv = v["_v"]
+        ox = v["_ox"]
+        oy = v["_oy"]
+        args[which] = nv
+        nv = f(*args)
+        return({
+            "_ox":ox,
+            "_oy":oy,
+            "_v":nv
+        })
+
+
+
+
