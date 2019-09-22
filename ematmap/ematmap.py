@@ -17,7 +17,7 @@ def _get_fo(x,y,**kwargs):
     return((map_func,other_args))
 
 
-@eftl.inplace_wrapper
+@eftl.deepcopy_wrapper
 def _map(func):
     def wrapper(m,**kwargs):
         lngth = len(m)
