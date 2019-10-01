@@ -22,7 +22,7 @@ def _map(func):
     def wrapper(m,**kwargs):
         lngth = len(m)
         for x in range(lngth):
-            layer = m[i]
+            layer = m[x]
             llen = len(layer)
             for y in range(llen):
                 map_func,other_args = _get_fo(x,y,**kwargs)
