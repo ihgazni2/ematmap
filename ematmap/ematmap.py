@@ -1,5 +1,8 @@
 import efuntool.efuntool as eftl
+import elist.elist as elel
+import copy
 
+#MAP
 
 def _get_fo(x,y,**kwargs):
     map_func = eftl.dflt_kwargs("map_func",lambda ele:ele,**kwargs)
@@ -437,6 +440,127 @@ def mapfxyvo(d):
     v = m[x][y]
     ele = map_func(x,y,v,o,*other_args)
     return(ele)
+
+################
+
+
+
+#######################LEVLE 0 可做操作############################
+#INIT
+
+def init_mat(layer_length_list,**kwargs):
+    '''
+        from xdict.jprint import pobj,pdir,parr
+        init_mat([1,3,2])
+        parr(init_mat([1,3,2]))
+        >>> parr(init_mat([1,3,2]))
+        [None]
+        [None, None, None]
+        [None, None]
+        >>>
+    '''
+    value = eftl.dflt_kwargs("value",None,**kwargs)
+    dcp = eftl.dflt_kwargs("deepcopy",False,**kwargs)
+    value = copy.deepcopy(value) if (dcp) else value
+    depth = len(layer_length_list)
+    m = elel.init(depth,[])
+    for i in range(depth):
+        layer_lngth = layer_length_list[i]
+        m[i]  = elel.init(layer_lngth,value)
+    return(m)
+
+def append_non_empty_lyr(layer,m):
+    lngth = len(layer)
+    if(lngth == 0):
+        pass
+    else:
+        m.append(layer)
+    return(m)
+
+
+def append_ele_at_depth(depth,ele,m):
+    curr_depth = len(m) - 1
+    if(depth == curr_depth):
+        layer = m[depth]
+        layer.append(ele)
+    elif(depth == curr_depth + 1):
+        m.append([ele])
+    else:
+        print("Error! can only append-<ele>-to-current-layer or append-a-new-next-layer-[ele]-to-mat")
+    return(m)
+
+
+#SIZE
+
+def get_matsize(m):
+    size = 0
+    depth = len(m)
+    for i in range(depth):
+        layer = m[depth]
+        lngth = len(layer)
+        for j in range(lngth):
+            size = size + 1
+    return(size)
+
+
+def get_maxlyrlen(m):
+    return(elel.max_length(m))
+
+
+def get_maxlenlyr_depth(m,*args):
+    which = eftl.optional_which_arg("all",*args)
+    mll = get_maxlyrlen(m)
+    depths = elel.cond_select_indexes_all(m,cond_func=lambda ele:len(ele)==mll)
+    rslt = depths if(which == "all") else depths[which]
+    return(rslt)
+
+def get_maxlenlyr(m,*args):
+    which = eftl.optional_which_arg("all",*args)
+    depths = get_maxlenlyr_depth(m)
+    layers = elel.select_seqs_keep_order(m,depths)
+    rslt = layers if(which == "all") else layers[which]
+    return(rslt)
+
+
+# GET 
+
+def xy2loc(x,y):
+    return([x,y])
+
+def xy2ele(x,y,m):
+    return(m[x][y])
+
+def loc2ele(loc,m):
+    x,y = loc
+    return(xy2ele(x,y,m))
+
+
+# SET
+
+def xyset(x,y,value,m):
+    m[x][y] = value
+    return(m)
+
+def locset(loc,value,m):
+    x,y = loc
+    m[x][y] = value
+    return(m)
+
+
+#########################################################################
+
+
+# DEL 
+##  DELETE-IS-HIGH-LEVEL-FEATURE-BASE-ON-ID
+
+
+
+
+
+
+
+
+
 
 
 #################
