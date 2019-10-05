@@ -1,3 +1,4 @@
+import ematmap.udlr as udlr
 #######################LEVLE 0 可做操作############################
 #INIT
 
@@ -87,6 +88,9 @@ def loc2ele(loc,m):
     x,y = loc
     return(xy2ele(x,y,m))
 
+def ele2loc(ele):
+    return((ele.depth,ele.breadth))
+
 
 # SET
 
@@ -98,6 +102,39 @@ def locset(loc,value,m):
     x,y = loc
     m[x][y] = value
     return(m)
+
+
+###
+# value-of-unique-attribute
+
+def get_uniav2loc_map(m,aname):
+    d = {}
+    dummy = udlr.mapv(m,lambda ele:d.__setitem__(getattr(ele,aname),ele2loc(ele)))
+    return(d)
+
+# value-of-unique-key
+
+def get_unikv2loc_map(m,kname):
+    d = {}
+    dummy = udlr.mapv(m,lambda ele:d.__setitem__(ele[kname],ele2loc(ele)))
+    return(d)
+
+def get_loc2av_map(m,aname):
+    d = {}
+    dummy = udlr.mapv(m,lambda ele:d.__setitem__(ele2loc(ele),getattr(ele,aname)))
+    return(d)
+
+
+def get_loc2kv_map(m,kname):
+    d = {}
+    dummy = udlr.mapv(m,lambda ele:d.__setitem__(ele2loc(ele),ele[kname]))
+    return(d)
+
+
+
+###
+
+
 
 
 #########################################################################
