@@ -90,7 +90,6 @@ def durl_wrap(func):
             llen = len(layer)
             for y in range(llen-1,-1,-1):
                 map_func,other_args = _get_fo(x,y,**kwargs)
-                print(x,y)
                 m[x][y] = func({
                     "f":map_func,
                     "x":x,
