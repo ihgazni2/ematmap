@@ -50,7 +50,7 @@ def get_matsize(m):
     size = 0
     depth = len(m)
     for i in range(depth):
-        layer = m[depth]
+        layer = m[i]
         lngth = len(layer)
         for j in range(lngth):
             size = size + 1
