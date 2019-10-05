@@ -81,7 +81,7 @@ def dulr_wrap(func):
     return(wrapper)
 
 
-def dulr_wrap(func):
+def durl_wrap(func):
     @eftl.deepcopy_wrapper
     def wrapper(m,**kwargs):
         lngth = len(m)
