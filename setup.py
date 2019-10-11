@@ -5,7 +5,7 @@ requirements = []
 
 setup(
       name="ematmap",
-      version = "0.1", #@version@#
+      version = "0.2", #@version@#
       description="mat map",
       author="ihgazni2",
       url="https://github.com/ihgazni2/ematmap",
