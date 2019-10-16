@@ -156,157 +156,96 @@ def fxyvofltre(d):
 
 #####
 #####
+def ffltrxy(m,**kwargs):
+    return(ffltre(m,rtrn='loc',**kwargs))
 
-def ffltrxy(m):
-    return(ffltre(m,rtrn='loc'))
+def xfltrxy(m,**kwargs):
+    return(xfltre(m,rtrn='loc',**kwargs))
 
+def yfltrxy(m,**kwargs):
+    return(yfltre(m,rtrn='loc',**kwargs))
 
+def vfltrxy(m,**kwargs):
+    return(vfltre(m,rtrn='loc',**kwargs))
 
-def xfltrxy(m):
-    return(xfltre(m,rtrn='loc'))
+def ofltrxy(m,**kwargs):
+    return(ofltre(m,rtrn='loc',**kwargs))
 
+def fxfltrxy(m,**kwargs):
+    return(fxfltre(m,rtrn='loc',**kwargs))
 
+def fyfltrxy(m,**kwargs):
+    return(fyfltre(m,rtrn='loc',**kwargs))
 
-def yfltrxy(m):
-    return(yfltre(m,rtrn='loc'))
+def fvfltrxy(m,**kwargs):
+    return(fvfltre(m,rtrn='loc',**kwargs))
 
+def fofltrxy(m,**kwargs):
+    return(fofltre(m,rtrn='loc',**kwargs))
 
+def xyfltrxy(m,**kwargs):
+    return(xyfltre(m,rtrn='loc',**kwargs))
 
-def vfltrxy(m):
-    return(vfltre(m,rtrn='loc'))
+def xvfltrxy(m,**kwargs):
+    return(xvfltre(m,rtrn='loc',**kwargs))
 
+def xofltrxy(m,**kwargs):
+    return(xofltre(m,rtrn='loc',**kwargs))
 
+def yvfltrxy(m,**kwargs):
+    return(yvfltre(m,rtrn='loc',**kwargs))
 
-def ofltrxy(m):
-    return(ofltre(m,rtrn='loc'))
+def yofltrxy(m,**kwargs):
+    return(yofltre(m,rtrn='loc',**kwargs))
 
+def vofltrxy(m,**kwargs):
+    return(vofltre(m,rtrn='loc',**kwargs))
 
+def fxyfltrxy(m,**kwargs):
+    return(fxyfltre(m,rtrn='loc',**kwargs))
 
-def fxfltrxy(m):
-    return(fxfltre(m,rtrn='loc'))
+def fxvfltrxy(m,**kwargs):
+    return(fxvfltre(m,rtrn='loc',**kwargs))
 
+def fxofltrxy(m,**kwargs):
+    return(fxofltre(m,rtrn='loc',**kwargs))
 
+def fyvfltrxy(m,**kwargs):
+    return(fyvfltre(m,rtrn='loc',**kwargs))
 
-def fyfltrxy(m):
-    return(fyfltre(m,rtrn='loc'))
+def fyofltrxy(m,**kwargs):
+    return(fyofltre(m,rtrn='loc',**kwargs))
 
+def fvofltrxy(m,**kwargs):
+    return(fvofltre(m,rtrn='loc',**kwargs))
 
+def xyvfltrxy(m,**kwargs):
+    return(xyvfltre(m,rtrn='loc',**kwargs))
 
-def fvfltrxy(m):
-    return(fvfltre(m,rtrn='loc'))
+def xyofltrxy(m,**kwargs):
+    return(xyofltre(m,rtrn='loc',**kwargs))
 
+def xvofltrxy(m,**kwargs):
+    return(xvofltre(m,rtrn='loc',**kwargs))
 
+def yvofltrxy(m,**kwargs):
+    return(yvofltre(m,rtrn='loc',**kwargs))
 
-def fofltrxy(m):
-    return(fofltre(m,rtrn='loc'))
+def fxyvfltrxy(m,**kwargs):
+    return(fxyvfltre(m,rtrn='loc',**kwargs))
 
+def fxyofltrxy(m,**kwargs):
+    return(fxyofltre(m,rtrn='loc',**kwargs))
 
+def fxvofltrxy(m,**kwargs):
+    return(fxvofltre(m,rtrn='loc',**kwargs))
 
-def xyfltrxy(m):
-    return(xyfltre(m,rtrn='loc'))
+def fyvofltrxy(m,**kwargs):
+    return(fyvofltre(m,rtrn='loc',**kwargs))
 
+def xyvofltrxy(m,**kwargs):
+    return(xyvofltre(m,rtrn='loc',**kwargs))
 
-
-def xvfltrxy(m):
-    return(xvfltre(m,rtrn='loc'))
-
-
-
-def xofltrxy(m):
-    return(xofltre(m,rtrn='loc'))
-
-
-
-def yvfltrxy(m):
-    return(yvfltre(m,rtrn='loc'))
-
-
-
-def yofltrxy(m):
-    return(yofltre(m,rtrn='loc'))
-
-
-
-def vofltrxy(m):
-    return(vofltre(m,rtrn='loc'))
-
-
-
-def fxyfltrxy(m):
-    return(fxyfltre(m,rtrn='loc'))
-
-
-
-def fxvfltrxy(m):
-    return(fxvfltre(m,rtrn='loc'))
-
-
-
-def fxofltrxy(m):
-    return(fxofltre(m,rtrn='loc'))
-
-
-
-def fyvfltrxy(m):
-    return(fyvfltre(m,rtrn='loc'))
-
-
-
-def fyofltrxy(m):
-    return(fyofltre(m,rtrn='loc'))
-
-
-
-def fvofltrxy(m):
-    return(fvofltre(m,rtrn='loc'))
-
-
-
-def xyvfltrxy(m):
-    return(xyvfltre(m,rtrn='loc'))
-
-
-
-def xyofltrxy(m):
-    return(xyofltre(m,rtrn='loc'))
-
-
-
-def xvofltrxy(m):
-    return(xvofltre(m,rtrn='loc'))
-
-
-
-def yvofltrxy(m):
-    return(yvofltre(m,rtrn='loc'))
-
-
-
-def fxyvfltrxy(m):
-    return(fxyvfltre(m,rtrn='loc'))
-
-
-
-def fxyofltrxy(m):
-    return(fxyofltre(m,rtrn='loc'))
-
-
-
-def fxvofltrxy(m):
-    return(fxvofltre(m,rtrn='loc'))
-
-
-
-def fyvofltrxy(m):
-    return(fyvofltre(m,rtrn='loc'))
-
-
-
-def xyvofltrxy(m):
-    return(xyvofltre(m,rtrn='loc'))
-
-
-
-def fxyvofltrxy(m):
-    return(fxyvofltre(m,rtrn='loc'))
+def fxyvofltrxy(m,**kwargs):
+    return(fxyvofltre(m,rtrn='loc',**kwargs))
 
