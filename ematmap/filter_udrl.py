@@ -157,157 +157,156 @@ def fxyvofltre(d):
 #####
 #####
 
-@engine.udrl_wrap
-def ffltrxy(d):
-    return(engine.ffltre(d,rtrn='loc'))
+def ffltrxy(m):
+    return(ffltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xfltrxy(d):
-    return(engine.xfltre(d,rtrn='loc'))
+
+def xfltrxy(m):
+    return(xfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def yfltrxy(d):
-    return(engine.yfltre(d,rtrn='loc'))
+
+def yfltrxy(m):
+    return(yfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def vfltrxy(d):
-    return(engine.vfltre(d,rtrn='loc'))
+
+def vfltrxy(m):
+    return(vfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def ofltrxy(d):
-    return(engine.ofltre(d,rtrn='loc'))
+
+def ofltrxy(m):
+    return(ofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxfltrxy(d):
-    return(engine.fxfltre(d,rtrn='loc'))
+
+def fxfltrxy(m):
+    return(fxfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fyfltrxy(d):
-    return(engine.fyfltre(d,rtrn='loc'))
+
+def fyfltrxy(m):
+    return(fyfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fvfltrxy(d):
-    return(engine.fvfltre(d,rtrn='loc'))
+
+def fvfltrxy(m):
+    return(fvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fofltrxy(d):
-    return(engine.fofltre(d,rtrn='loc'))
+
+def fofltrxy(m):
+    return(fofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xyfltrxy(d):
-    return(engine.xyfltre(d,rtrn='loc'))
+
+def xyfltrxy(m):
+    return(xyfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xvfltrxy(d):
-    return(engine.xvfltre(d,rtrn='loc'))
+
+def xvfltrxy(m):
+    return(xvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xofltrxy(d):
-    return(engine.xofltre(d,rtrn='loc'))
+
+def xofltrxy(m):
+    return(xofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def yvfltrxy(d):
-    return(engine.yvfltre(d,rtrn='loc'))
+
+def yvfltrxy(m):
+    return(yvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def yofltrxy(d):
-    return(engine.yofltre(d,rtrn='loc'))
+
+def yofltrxy(m):
+    return(yofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def vofltrxy(d):
-    return(engine.vofltre(d,rtrn='loc'))
+
+def vofltrxy(m):
+    return(vofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxyfltrxy(d):
-    return(engine.fxyfltre(d,rtrn='loc'))
+
+def fxyfltrxy(m):
+    return(fxyfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxvfltrxy(d):
-    return(engine.fxvfltre(d,rtrn='loc'))
+
+def fxvfltrxy(m):
+    return(fxvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxofltrxy(d):
-    return(engine.fxofltre(d,rtrn='loc'))
+
+def fxofltrxy(m):
+    return(fxofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fyvfltrxy(d):
-    return(engine.fyvfltre(d,rtrn='loc'))
+
+def fyvfltrxy(m):
+    return(fyvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fyofltrxy(d):
-    return(engine.fyofltre(d,rtrn='loc'))
+
+def fyofltrxy(m):
+    return(fyofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fvofltrxy(d):
-    return(engine.fvofltre(d,rtrn='loc'))
+
+def fvofltrxy(m):
+    return(fvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xyvfltrxy(d):
-    return(engine.xyvfltre(d,rtrn='loc'))
+
+def xyvfltrxy(m):
+    return(xyvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xyofltrxy(d):
-    return(engine.xyofltre(d,rtrn='loc'))
+
+def xyofltrxy(m):
+    return(xyofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xvofltrxy(d):
-    return(engine.xvofltre(d,rtrn='loc'))
+
+def xvofltrxy(m):
+    return(xvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def yvofltrxy(d):
-    return(engine.yvofltre(d,rtrn='loc'))
+
+def yvofltrxy(m):
+    return(yvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxyvfltrxy(d):
-    return(engine.fxyvfltre(d,rtrn='loc'))
+
+def fxyvfltrxy(m):
+    return(fxyvfltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxyofltrxy(d):
-    return(engine.fxyofltre(d,rtrn='loc'))
+
+def fxyofltrxy(m):
+    return(fxyofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxvofltrxy(d):
-    return(engine.fxvofltre(d,rtrn='loc'))
+
+def fxvofltrxy(m):
+    return(fxvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fyvofltrxy(d):
-    return(engine.fyvofltre(d,rtrn='loc'))
+
+def fyvofltrxy(m):
+    return(fyvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def xyvofltrxy(d):
-    return(engine.xyvofltre(d,rtrn='loc'))
+
+def xyvofltrxy(m):
+    return(xyvofltre(m,rtrn='loc'))
 
 
-@engine.udrl_wrap
-def fxyvofltrxy(d):
-    return(engine.fxyvofltre(d,rtrn='loc'))
+
+def fxyvofltrxy(m):
+    return(fxyvofltre(m,rtrn='loc'))
 
