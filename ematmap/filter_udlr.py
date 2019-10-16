@@ -52,6 +52,11 @@ def xyfltre(d):
 
 @engine.udlr_wrap
 def xvfltre(d):
+    '''
+        >>> xvfltre([[1],[2,3]],cond_func=lambda x,v:(v%2==1))
+        [1, 3]
+        >>>
+    '''
     return(engine.xvfltre(d))
 
 

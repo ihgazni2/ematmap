@@ -20,6 +20,14 @@ def _get_fo(x,y,**kwargs):
     return((map_func,other_args))
 
 
+def _get_rtrn(x,y,m,**kwargs):
+    rtrn = eftl.dflt_kwargs("rtrn","ele",**kwargs)
+    if(rtrn == "ele"):
+        return(m[x][y])
+    else:
+        return([x,y])
+
+
 def udlr_wrap(func):
     @eftl.deepcopy_wrapper
     def wrapper(m,**kwargs):
