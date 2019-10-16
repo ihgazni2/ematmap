@@ -20,6 +20,14 @@ def _get_fo(x,y,**kwargs):
     return((cond_func,other_args))
 
 
+def _get_rtrn(x,y,m,**kwargs):
+    rtrn = eftl.dflt_kwargs("rtrn","ele",**kwargs)
+    if(rtrn == "ele"):
+        return(m[x][y])
+    else:
+        return([x,y])
+
+
 def udlr_wrap(func):
     @eftl.deepcopy_wrapper
     def wrapper(m,**kwargs):
@@ -38,7 +46,8 @@ def udlr_wrap(func):
                     "m":m
                 })
                 if(cond):
-                    rslt.append(m[x][y])
+                    rtrn = _get_rtrn(x,y,m,**kwargs)
+                    rslt.append(rtrn)
                 else:
                     pass
         return(rslt)
@@ -63,7 +72,8 @@ def udrl_wrap(func):
                     "m":m
                 })
                 if(cond):
-                    rslt.append(m[x][y])
+                    rtrn = _get_rtrn(x,y,m,**kwargs)
+                    rslt.append(rtrn)
                 else:
                     pass
         return(rslt)
@@ -89,7 +99,8 @@ def dulr_wrap(func):
                     "m":m
                 })
                 if(cond):
-                    rslt.append(m[x][y])
+                    rtrn = _get_rtrn(x,y,m,**kwargs)
+                    rslt.append(rtrn)
                 else:
                     pass
         return(rslt)
@@ -114,7 +125,8 @@ def durl_wrap(func):
                     "m":m
                 })
                 if(cond):
-                    rslt.append(m[x][y])
+                    rtrn = _get_rtrn(x,y,m,**kwargs)
+                    rslt.append(rtrn)
                 else:
                     pass
         return(rslt)
@@ -467,5 +479,9 @@ def fxyvofltre(d):
     v = m[x][y]
     ele = cond_func(x,y,v,o,*other_args)
     return(ele)
+
+
+#####
+#####
 
 
