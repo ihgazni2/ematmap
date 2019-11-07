@@ -23,6 +23,12 @@ def init_mat(layer_length_list,**kwargs):
         m[i]  = elel.init(layer_lngth,value)
     return(m)
 
+def tem_init_mat(tem,**kwargs):
+    layer_length_list = elel.mapv(tem,lambda lyr:len(lyr))
+    m = init_mat(layer_length_list,**kwargs)
+    return(m)
+
+
 def append_non_empty_lyr(layer,m):
     lngth = len(layer)
     if(lngth == 0):
