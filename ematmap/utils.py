@@ -100,6 +100,11 @@ def ele2loc(ele):
     return((ele.depth,ele.breadth))
 
 
+def locl_get_el(locl,m):
+    el = elel.mapv(locl,loc2ele,[m])
+    return(el)
+
+
 # SET
 
 def xyset(x,y,value,m):
